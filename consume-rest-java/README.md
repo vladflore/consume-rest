@@ -15,4 +15,4 @@ It exemplifies:
 mvn clean package
 java -jar target/consume-rest-java-1.0-SNAPSHOT-jar-with-dependencies.jar https://jsonplaceholder.typicode.com/users
 ```
-The code is licensed under [LICENSE](LICENSE)
+The code is licensed under [LICENSE](../LICENSE)
