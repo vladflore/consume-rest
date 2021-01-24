@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import tech.vladflore.consumerest.model.User;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -19,7 +20,7 @@ public class UseCase implements CommandLineRunner {
 
 	private final WebService webService;
 
-	public UseCase(WebService webService) {
+	public UseCase(@Qualifier("webServiceImpl") WebService webService) {
 		this.webService = webService;
 	}
 

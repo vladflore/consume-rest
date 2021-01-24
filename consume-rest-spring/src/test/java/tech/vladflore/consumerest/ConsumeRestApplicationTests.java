@@ -7,15 +7,19 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@SpringBootTest(properties = { "targetUrl=http://dummy-url.com" })
+@SpringBootTest(properties = { "targetUrl=http://dummy-url.com/users" })
 class ConsumeRestApplicationTests {
 
 	@MockBean
 	private UseCase useCase;
 
+	@MockBean
+	private MyApplicationListener myApplicationListener;
+
 	@Test
 	void contextLoads() {
 		assertThat(useCase).isNotNull();
+		assertThat(myApplicationListener).isNotNull();
 	}
 
 }
